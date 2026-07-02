@@ -1,0 +1,148 @@
+[
+  {
+    "id": "igni-signs",
+    "name": "Sinais de Fogo (Igni)",
+    "tags": ["focus:sign", "role:damage", "stage:mid-game", "requires:base-game", "gear:griffin"],
+    "description": "Build focada em conjurar Igni repetidamente para incinerar grupos de inimigos, usando a armadura do Grifo para maximizar a intensidade dos sinais e reduzir o custo de Vigor.",
+    "skills": [
+      "igni-melt-armor",
+      "pyromaniac",
+      "aard-sweep",
+      "aard-intensity",
+      "exploding-shield",
+      "sustained-glyphs",
+      "griffin-school-techniques",
+      "synergy",
+      "sixth-sense",
+      "razor-focus"
+    ],
+    "gearSchool": "griffin",
+    "difficulty": "moderate"
+  },
+  {
+    "id": "alchemy-toxicity",
+    "name": "Alquimia e Toxicidade",
+    "tags": ["focus:alchemy", "role:survivability", "stage:mid-game", "requires:base-game", "gear:wolven"],
+    "description": "Build de sobrevivência baseada em manter alta tolerância a toxicidade para consumir múltiplas poções e decocções simultaneamente, usando a resistência equilibrada da armadura do Lobo como base.",
+    "skills": [
+      "acquired-tolerance",
+      "heightened-tolerance",
+      "tissue-transmutation",
+      "synergy",
+      "protective-coating",
+      "fixative",
+      "metabolic-control",
+      "refreshment",
+      "side-effects",
+      "poisoned-blade"
+    ],
+    "gearSchool": "wolven",
+    "decoctions": ["ekhidna-decoction", "troll-decoction", "wyvern-decoction"],
+    "difficulty": "moderate"
+  },
+  {
+    "id": "feline-fast-attack",
+    "name": "Ataque Rápido (Escola do Gato)",
+    "tags": ["focus:combat-fast", "role:damage", "stage:early-game", "requires:base-game", "gear:cat"],
+    "description": "Build de ataque rápido com a armadura do Gato, priorizando esquivas, críticos altos e uma sequência constante de golpes rápidos contra inimigos isolados.",
+    "skills": [
+      "muscle-memory",
+      "precise-blows",
+      "crippling-strikes",
+      "counterattack",
+      "cat-school-techniques",
+      "fleet-footed",
+      "resolve",
+      "razor-focus",
+      "sixth-sense",
+      "steady-shot"
+    ],
+    "gearSchool": "cat",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ursine-strong-attack",
+    "name": "Ataque Forte (Escola do Urso)",
+    "tags": ["focus:combat-strong", "role:damage", "stage:mid-game", "requires:base-game", "gear:ursine"],
+    "description": "Build de ataques fortes com a armadura pesada do Urso, focada em quebrar a armadura inimiga e desferir golpes devastadores enquanto absorve dano graças à alta defesa do conjunto.",
+    "skills": [
+      "crushing-blows",
+      "rend",
+      "whirl",
+      "sunder-armor",
+      "deadly-precision",
+      "flood-of-anger",
+      "ursine-school-techniques",
+      "resolve",
+      "undying",
+      "razor-focus"
+    ],
+    "gearSchool": "ursine",
+    "difficulty": "moderate"
+  },
+  {
+    "id": "quen-tank",
+    "name": "Tanque de Quen",
+    "tags": ["focus:sign", "role:survivability", "stage:early-game", "requires:base-game", "gear:griffin"],
+    "description": "Build de sobrevivência baseada em manter o escudo de Quen sempre ativo, absorvendo e refletindo dano enquanto Geralt aguarda aberturas para contra-atacar com segurança.",
+    "skills": [
+      "active-shield",
+      "exploding-shield",
+      "sixth-sense",
+      "resolve",
+      "griffin-school-techniques",
+      "fleet-footed",
+      "undying",
+      "razor-focus",
+      "protective-coating",
+      "synergy"
+    ],
+    "gearSchool": "griffin",
+    "difficulty": "easy"
+  },
+  {
+    "id": "euphoria-hybrid",
+    "name": "Euphoria (Híbrido Definitivo)",
+    "tags": ["focus:hybrid", "role:damage", "stage:ng-plus", "requires:blood-and-wine", "gear:manticore"],
+    "description": "Build definitiva de NG+ que transforma toxicidade em dano puro: a mutação Euphoria converte veneno acumulado em poder de espada e de sinais, potencializado pela armadura da Mantícora e por uma tolerância a toxicidade extremamente alta.",
+    "skills": [
+      "acquired-tolerance",
+      "heightened-tolerance",
+      "tissue-transmutation",
+      "synergy",
+      "metabolic-control",
+      "igni-melt-armor",
+      "razor-focus",
+      "manticore-school-techniques",
+      "strengthened-synapses",
+      "precise-blows",
+      "protective-coating",
+      "fixative"
+    ],
+    "gearSchool": "manticore",
+    "mutation": "euphoria",
+    "decoctions": ["ekhidna-decoction", "fiend-decoction"],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "piercing-cold-signs",
+    "name": "Frio Penetrante (Sinais Avançado)",
+    "tags": ["focus:sign", "role:crowd-control", "stage:ng-plus", "requires:blood-and-wine", "gear:griffin"],
+    "description": "Build avançada de sinais para NG+ onde Aard, potencializado pela mutação Piercing Cold e por alta geração de Adrenalina, congela e estilhaça grupos inteiros de inimigos comuns quase instantaneamente.",
+    "skills": [
+      "aard-sweep",
+      "aard-intensity",
+      "igni-melt-armor",
+      "razor-focus",
+      "griffin-school-techniques",
+      "strengthened-synapses",
+      "sixth-sense",
+      "synergy",
+      "sustained-glyphs",
+      "exploding-shield"
+    ],
+    "gearSchool": "griffin",
+    "mutation": "piercing-cold",
+    "difficulty": "advanced"
+  }
+]

@@ -1,0 +1,12 @@
+[
+  { "id": "glyph-of-quen", "name": "Glifo de Quen", "type": "glyph", "effect": "Aumenta levemente a intensidade do sinal Quen quando cravado na armadura." },
+  { "id": "greater-glyph-of-quen", "name": "Glifo Maior de Quen", "type": "glyph", "effect": "Aumenta consideravelmente a intensidade do sinal Quen quando cravado na armadura." },
+  { "id": "glyph-of-igni", "name": "Glifo de Igni", "type": "glyph", "effect": "Aumenta levemente a intensidade do sinal Igni quando cravado na armadura." },
+  { "id": "greater-glyph-of-igni", "name": "Glifo Maior de Igni", "type": "glyph", "effect": "Aumenta consideravelmente a intensidade do sinal Igni quando cravado na armadura." },
+  { "id": "glyph-of-aard", "name": "Glifo de Aard", "type": "glyph", "effect": "Aumenta levemente a intensidade do sinal Aard quando cravado na armadura." },
+  { "id": "greater-glyph-of-aard", "name": "Glifo Maior de Aard", "type": "glyph", "effect": "Aumenta consideravelmente a intensidade do sinal Aard quando cravado na armadura." },
+  { "id": "glyph-of-yrden", "name": "Glifo de Yrden", "type": "glyph", "effect": "Aumenta levemente a intensidade do sinal Yrden quando cravado na armadura." },
+  { "id": "greater-glyph-of-yrden", "name": "Glifo Maior de Yrden", "type": "glyph", "effect": "Aumenta consideravelmente a intensidade do sinal Yrden quando cravado na armadura." },
+  { "id": "glyph-of-axii", "name": "Glifo de Axii", "type": "glyph", "effect": "Aumenta levemente a intensidade do sinal Axii quando cravado na armadura." },
+  { "id": "greater-glyph-of-axii", "name": "Glifo Maior de Axii", "type": "glyph", "effect": "Aumenta consideravelmente a intensidade do sinal Axii quando cravado na armadura." }
+]

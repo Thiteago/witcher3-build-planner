@@ -1,0 +1,14 @@
+[
+  { "id": "necrophage-oil", "name": "Óleo de Necrófago", "type": "oil", "effect": "Aumenta o dano da espada de aço contra necrófagos, como ghouls e afogados." },
+  { "id": "insectoid-oil", "name": "Óleo de Insectoide", "type": "oil", "effect": "Aumenta o dano da espada de aço contra criaturas insectoides, como aranhas gigantes e enxames." },
+  { "id": "beast-oil", "name": "Óleo de Fera", "type": "oil", "effect": "Aumenta o dano da espada de aço contra feras, como lobos e ursos." },
+  { "id": "draconid-oil", "name": "Óleo de Draconídeo", "type": "oil", "effect": "Aumenta o dano da espada de aço contra draconídeos, como wyverns e basiliscos." },
+  { "id": "elementa-oil", "name": "Óleo Elementar", "type": "oil", "effect": "Aumenta o dano da espada de aço contra elementais e golens." },
+  { "id": "hybrid-oil", "name": "Óleo Híbrido", "type": "oil", "effect": "Concede um bônus de dano moderado contra praticamente todos os tipos de monstro." },
+  { "id": "ogroid-oil", "name": "Óleo de Ogroide", "type": "oil", "effect": "Aumenta o dano da espada de aço contra ogroides, como ciclopes e trolls." },
+  { "id": "relict-oil", "name": "Óleo de Relíquia", "type": "oil", "effect": "Aumenta o dano da espada de prata contra criaturas relictas, como criaturas antigas ligadas à magia primitiva." },
+  { "id": "specter-oil", "name": "Óleo de Espectro", "type": "oil", "effect": "Aumenta o dano da espada de prata contra espectros, como nightwraiths e banshees." },
+  { "id": "vampire-oil", "name": "Óleo de Vampiro", "type": "oil", "effect": "Aumenta o dano da espada de prata contra vampiros, como katakans e bruxas garrafais." },
+  { "id": "cursed-oil", "name": "Óleo Amaldiçoado", "type": "oil", "effect": "Aumenta o dano da espada de prata contra criaturas amaldiçoadas, como lobisomens e a Dama Alada." },
+  { "id": "hanged-mans-venom", "name": "Veneno do Enforcado", "type": "oil", "effect": "Aumenta o dano da espada de aço contra inimigos humanos." }
+]

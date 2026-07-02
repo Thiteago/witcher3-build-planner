@@ -1,0 +1,11 @@
+[
+  { "id": "ekhidna-decoction", "name": "Decocção de Ekhidna", "type": "decoction", "effect": "Regenera vitalidade automaticamente durante o combate por um curto período." },
+  { "id": "troll-decoction", "name": "Decocção de Troll", "type": "decoction", "effect": "Regenera vitalidade rapidamente quando Geralt está com pouca vida." },
+  { "id": "wyvern-decoction", "name": "Decocção de Wyvern", "type": "decoction", "effect": "Neutraliza venenos ativos e concede resistência temporária a toxinas." },
+  { "id": "ancient-leshen-decoction", "name": "Decocção de Leshen Ancião", "type": "decoction", "effect": "Sinais conjurados durante o efeito ignoram parte da resistência mágica dos inimigos." },
+  { "id": "fiend-decoction", "name": "Decocção de Fiend", "type": "decoction", "effect": "Adrenalina é gerada continuamente durante o combate, mesmo sem alternar entre tipos de ataque." },
+  { "id": "katakan-decoction", "name": "Decocção de Katakan", "type": "decoction", "effect": "Uma parte da vitalidade drenada de inimigos é convertida em Vigor." },
+  { "id": "forktail-decoction", "name": "Decocção de Forktail", "type": "decoction", "effect": "Reduz significativamente o dano contínuo sofrido, como sangramento, veneno e queimadura." },
+  { "id": "griffin-decoction", "name": "Decocção de Grifo", "type": "decoction", "effect": "Conjurar sinais não interrompe combos de ataques com a espada." },
+  { "id": "succubus-decoction", "name": "Decocção de Súcubo", "type": "decoction", "effect": "Efeitos de runas e glifos equipados são reforçados por um curto período." }
+]

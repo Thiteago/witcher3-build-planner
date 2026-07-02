@@ -1,0 +1,11 @@
+[
+  { "id": "severance", "name": "Severance", "type": "rune", "effect": "Aumenta o dano de sinais causado logo após acertar um ataque com a espada." },
+  { "id": "invigoration", "name": "Invigoration", "type": "rune", "effect": "Recupera Vigor a cada acerto crítico com a espada." },
+  { "id": "chernobog", "name": "Chernobog", "type": "rune", "effect": "Aumenta o dano de ataques rápidos e fortes contra inimigos com vitalidade cheia." },
+  { "id": "svarog", "name": "Svarog", "type": "rune", "effect": "Ataques têm chance de causar sangramento e envenenamento simultaneamente." },
+  { "id": "triglav", "name": "Triglav", "type": "rune", "effect": "Reflete parte do dano recebido de volta contra o atacante." },
+  { "id": "stribog", "name": "Stribog", "type": "rune", "effect": "Reduz o tempo de recarga dos sinais." },
+  { "id": "devana", "name": "Devana", "type": "rune", "effect": "Aumenta a duração dos efeitos de status aplicados pela espada." },
+  { "id": "perun", "name": "Perun", "type": "rune", "effect": "Ataques têm chance de atordoar o inimigo com uma descarga elétrica." },
+  { "id": "dazhbog", "name": "Dazhbog", "type": "rune", "effect": "Acertos críticos têm chance de incendiar o alvo." }
+]

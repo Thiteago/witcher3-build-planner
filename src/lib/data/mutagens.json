@@ -1,0 +1,10 @@
+[
+  { "id": "lesser-ekimmara-mutagen", "name": "Mutágeno Menor de Ekimmara", "color": "red", "rarity": "lesser", "effect": "Restaura uma pequena quantidade de vitalidade a cada acerto com a espada." },
+  { "id": "greater-ekimmara-mutagen", "name": "Mutágeno Maior de Ekimmara", "color": "red", "rarity": "greater", "effect": "Restaura uma quantidade considerável de vitalidade a cada acerto com a espada." },
+  { "id": "greater-mutagen-katakan", "name": "Mutágeno Maior de Katakan", "color": "red", "rarity": "greater", "effect": "Aumenta consideravelmente o dano de acertos críticos." },
+  { "id": "lesser-noonwraith-mutagen", "name": "Mutágeno Menor de Noonwraith", "color": "blue", "rarity": "lesser", "effect": "Reduz levemente o tempo de recarga de todos os sinais." },
+  { "id": "greater-mutagen-djinn", "name": "Mutágeno Maior de Djinn", "color": "blue", "rarity": "greater", "effect": "Aumenta consideravelmente a intensidade de todos os sinais." },
+  { "id": "lesser-mutagen-earth-elemental", "name": "Mutágeno Menor de Elemental da Terra", "color": "green", "rarity": "lesser", "effect": "Aumenta levemente a tolerância máxima a toxicidade." },
+  { "id": "greater-mutagen-earth-elemental", "name": "Mutágeno Maior de Elemental da Terra", "color": "green", "rarity": "greater", "effect": "Aumenta consideravelmente a tolerância a toxicidade e converte parte do excesso em vitalidade." },
+  { "id": "greater-mutagen-forktail", "name": "Mutágeno Maior de Forktail", "color": "green", "rarity": "greater", "effect": "Aumenta a resistência a dano contínuo, como veneno, sangramento e queimadura." }
+]

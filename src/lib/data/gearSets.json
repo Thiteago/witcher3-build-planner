@@ -1,0 +1,84 @@
+[
+  {
+    "id": "wolven",
+    "name": "Armadura da Escola do Lobo",
+    "school": "wolven",
+    "playstyle": "Equilíbrio entre ataques rápidos, ataques fortes e sinais, ideal para builds híbridas e para quem está começando a montar seu equipamento.",
+    "tiers": [
+      { "name": "Básico", "order": 1 },
+      { "name": "Aprimorado", "order": 2 },
+      { "name": "Superior", "order": 3 },
+      { "name": "Obra-Prima", "order": 4 },
+      { "name": "Grão-Mestre", "order": 5 }
+    ],
+    "setBonuses": [
+      { "piecesRequired": 3, "description": "Reduz levemente o consumo de Vigor ao usar sinais logo após ataques com a espada." },
+      { "piecesRequired": 6, "description": "Cada ponto de Adrenalina concede resistência a dano e recuperação extra de Vigor por um curto período." }
+    ]
+  },
+  {
+    "id": "griffin",
+    "name": "Armadura da Escola do Grifo",
+    "school": "griffin",
+    "playstyle": "Focada em potencializar sinais, reduzir seu custo de Vigor e permitir conjurações em sequência, sendo a melhor escolha para builds baseadas em magia.",
+    "tiers": [
+      { "name": "Básico", "order": 1 },
+      { "name": "Aprimorado", "order": 2 },
+      { "name": "Superior", "order": 3 },
+      { "name": "Obra-Prima", "order": 4 },
+      { "name": "Grão-Mestre", "order": 5 }
+    ],
+    "setBonuses": [
+      { "piecesRequired": 3, "description": "Aumenta a intensidade de todos os sinais." },
+      { "piecesRequired": 6, "description": "Sinais têm chance de serem conjurados uma segunda vez sem custo adicional de Vigor." }
+    ]
+  },
+  {
+    "id": "cat",
+    "name": "Armadura da Escola do Gato",
+    "school": "cat",
+    "playstyle": "Armadura leve voltada a ataques rápidos, esquivas e furtividade, trocando proteção por velocidade e altíssimo dano crítico.",
+    "tiers": [
+      { "name": "Básico", "order": 1 },
+      { "name": "Aprimorado", "order": 2 },
+      { "name": "Superior", "order": 3 },
+      { "name": "Obra-Prima", "order": 4 },
+      { "name": "Grão-Mestre", "order": 5 }
+    ],
+    "setBonuses": [
+      { "piecesRequired": 3, "description": "Aumenta a chance e o dano de acertos críticos com ataques rápidos." },
+      { "piecesRequired": 6, "description": "Golpes rápidos consecutivos no mesmo alvo aumentam ainda mais a chance de crítico." }
+    ]
+  },
+  {
+    "id": "ursine",
+    "name": "Armadura da Escola do Urso",
+    "school": "ursine",
+    "playstyle": "A armadura mais pesada disponível, priorizando resistência bruta a dano e o poder de ataques fortes em vez de mobilidade.",
+    "tiers": [
+      { "name": "Básico", "order": 1 },
+      { "name": "Aprimorado", "order": 2 },
+      { "name": "Superior", "order": 3 },
+      { "name": "Obra-Prima", "order": 4 },
+      { "name": "Grão-Mestre", "order": 5 }
+    ],
+    "setBonuses": [
+      { "piecesRequired": 3, "description": "Aumenta a vitalidade máxima de Geralt." },
+      { "piecesRequired": 6, "description": "Reduz fortemente o dano de ataques fortes recebido e amplia o poder dos próprios ataques fortes." }
+    ]
+  },
+  {
+    "id": "manticore",
+    "name": "Armadura da Escola da Mantícora",
+    "school": "manticore",
+    "playstyle": "Equipamento exclusivo de Sangue e Vinho voltado à alquimia, aumentando o limite de toxicidade e potencializando poções, óleos e decocções.",
+    "tiers": [
+      { "name": "Grão-Mestre", "order": 5 }
+    ],
+    "setBonuses": [
+      { "piecesRequired": 3, "description": "Aumenta a tolerância máxima a toxicidade." },
+      { "piecesRequired": 6, "description": "Poções que excederiam o limite de uso simultâneo concedem um bônus adicional em vez de serem desperdiçadas." }
+    ],
+    "requiresDLC": "blood-and-wine"
+  }
+]

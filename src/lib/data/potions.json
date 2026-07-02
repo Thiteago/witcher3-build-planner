@@ -1,0 +1,12 @@
+[
+  { "id": "swallow", "name": "Swallow", "type": "potion", "effect": "Recupera vitalidade lentamente ao longo do tempo, durante e após o combate." },
+  { "id": "thunderbolt", "name": "Thunderbolt", "type": "potion", "effect": "Aumenta o dano de ataques rápidos e fortes por um curto período." },
+  { "id": "tawny-owl", "name": "Tawny Owl", "type": "potion", "effect": "Acelera consideravelmente a regeneração de Vigor por um curto período." },
+  { "id": "white-raffards-decoction", "name": "Decocção de White Raffard", "type": "potion", "effect": "Cura instantaneamente uma grande quantidade de vitalidade ao ser consumida (apesar do nome, é classificada como poção, não decocção)." },
+  { "id": "cat-potion", "name": "Cat", "type": "potion", "effect": "Concede visão noturna aprimorada, destacando inimigos e objetos em áreas escuras." },
+  { "id": "golden-oriole", "name": "Golden Oriole", "type": "potion", "effect": "Neutraliza venenos e reduz o dano recebido de toxinas e criaturas venenosas." },
+  { "id": "maribor-forest", "name": "Maribor Forest", "type": "potion", "effect": "Aumenta a regeneração de vitalidade durante a meditação." },
+  { "id": "petris-philtre", "name": "Petri's Philtre", "type": "potion", "effect": "Reduz o consumo de Vigor ao conjurar sinais por um curto período." },
+  { "id": "full-moon", "name": "Full Moon", "type": "potion", "effect": "Aumenta a chance crítica e a chance de aplicar efeitos de status durante a noite." },
+  { "id": "blizzard", "name": "Blizzard", "type": "potion", "effect": "Reduz o tempo de recuperação de esquivas e rolamentos por um curto período." }
+]
