@@ -15,6 +15,11 @@ export interface Skill {
 	color: SlotColor;
 	description: string;
 	tier: SkillTier;
+	/**
+	 * Column within the tree, as in the game files (e.g. "Sword_StyleFast",
+	 * "Signs_Aard", "Perks_col1"; DLC general perks use plain "Perks").
+	 */
+	column: string;
 	maxRank: number;
 	requiresDLC?: 'blood-and-wine' | 'hearts-of-stone';
 }
@@ -51,9 +56,17 @@ export interface Mutagen {
 
 export interface Mutation {
 	id: string;
+	/** Internal id in the game files (mutation1..mutation12). */
+	gameId: string;
 	name: string;
-	color: SlotColor | 'multi';
+	nameEn: string;
+	/** Mutagen colors consumed by the research; also gates which skill colors the extra slots accept. */
+	colors: Exclude<SlotColor, 'none'>[];
 	description: string;
+	/** Ids of mutations that must be researched before this one. */
+	requires: string[];
+	/** Research cost in mutagen points per color plus ability points. */
+	cost: { red: number; blue: number; green: number; skillPoints: number };
 	requiresDLC: 'blood-and-wine';
 }
 
@@ -91,7 +104,7 @@ export interface CuratedBuild {
 	difficulty: 'easy' | 'moderate' | 'advanced';
 }
 
-export const CUSTOM_BUILD_SCHEMA_VERSION = 3 as const;
+export const CUSTOM_BUILD_SCHEMA_VERSION = 4 as const;
 
 export const MUTAGEN_SLOT_COUNT = 4;
 

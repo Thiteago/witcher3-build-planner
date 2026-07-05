@@ -1,11 +1,134 @@
 [
-  { "id": "euphoria", "name": "Euphoria", "color": "green", "description": "Toxicidade acima de zero aumenta o dano de ataques com espada e a intensidade dos sinais, transformando o veneno acumulado em poder ofensivo direto.", "requiresDLC": "blood-and-wine" },
-  { "id": "cyclone", "name": "Cyclone", "color": "red", "description": "Enquanto usa habilidades giratórias como Redemoinho ou Fenda, Geralt gira lâminas adicionais, ampliando a área e o dano do golpe.", "requiresDLC": "blood-and-wine" },
-  { "id": "piercing-cold", "name": "Piercing Cold", "color": "blue", "description": "Aard reduz drasticamente a resistência mágica do alvo e pode congelar e estilhaçar inimigos mais fracos instantaneamente.", "requiresDLC": "blood-and-wine" },
-  { "id": "metamorphosis", "name": "Metamorphosis", "color": "multi", "description": "Reorganiza permanentemente parte dos bônus de atributos ligados às runas equipadas, incorporando-os diretamente ao corpo de Geralt.", "requiresDLC": "blood-and-wine" },
-  { "id": "conductors-of-magic", "name": "Conductors of Magic", "color": "multi", "description": "Runas cravadas na espada de aço passam a conceder seus bônus também na espada de prata, e vice-versa.", "requiresDLC": "blood-and-wine" },
-  { "id": "bloodbath", "name": "Bloodbath", "color": "red", "description": "Ataques rápidos têm chance de disparar uma sequência extra de golpes automáticos contra o mesmo alvo.", "requiresDLC": "blood-and-wine" },
-  { "id": "deadly-counter", "name": "Deadly Counter", "color": "red", "description": "Contra-ataques realizados após uma esquiva perfeita têm chance de executar instantaneamente inimigos comuns.", "requiresDLC": "blood-and-wine" },
-  { "id": "second-life", "name": "Second Life", "color": "green", "description": "Ao sofrer um golpe fatal, o efeito é anulado uma vez a cada intervalo de tempo e uma quantidade de vitalidade é restaurada.", "requiresDLC": "blood-and-wine" },
-  { "id": "symbiosis", "name": "Symbiosis", "color": "green", "description": "Decocções ativas regeneram vitalidade continuamente enquanto durar seu efeito.", "requiresDLC": "blood-and-wine" }
+  {
+    "id": "conductors-of-magic",
+    "gameId": "mutation1",
+    "name": "Condutores da magia",
+    "nameEn": "Conductors of Magic",
+    "colors": ["red", "blue"],
+    "description": "Desembainhadas, as espadas mágicas, únicas e de bruxo aumentam o dano causado por Sinais em 50%.",
+    "requires": ["piercing-cold"],
+    "cost": { "red": 2, "blue": 3, "green": 0, "skillPoints": 5 },
+    "requiresDLC": "blood-and-wine"
+  },
+  {
+    "id": "magic-sensibilities",
+    "gameId": "mutation2",
+    "name": "Sensibilidade Mágica",
+    "nameEn": "Magic Sensibilities",
+    "colors": ["blue"],
+    "description": "Sinais podem causar danos críticos. A chance e o dano de acertos críticos aumentam com a intensidade do Sinal. Oponentes mortos por um acerto crítico de Sinais explodem.",
+    "requires": [],
+    "cost": { "red": 0, "blue": 2, "green": 0, "skillPoints": 2 },
+    "requiresDLC": "blood-and-wine"
+  },
+  {
+    "id": "bloodbath",
+    "gameId": "mutation3",
+    "name": "Banho de sangue",
+    "nameEn": "Bloodbath",
+    "colors": ["red"],
+    "description": "Cada golpe fatal dado por uma espada desmembra o inimigo ou ativa um golpe finalizador. Cada golpe corpo a corpo aumenta o poder de ataque em 5% até o fim do combate, acumulável. O bônus é perdido se você levar dano (exceto dano de toxicidade).",
+    "requires": ["deadly-counter"],
+    "cost": { "red": 3, "blue": 0, "green": 0, "skillPoints": 3 },
+    "requiresDLC": "blood-and-wine"
+  },
+  {
+    "id": "toxic-blood",
+    "gameId": "mutation4",
+    "name": "Sangue tóxico",
+    "nameEn": "Toxic Blood",
+    "colors": ["green"],
+    "description": "Cada vez que você é ferido em combate corpo a corpo, o oponente que atacou recebe dano proporcional ao seu nível de toxicidade atual.",
+    "requires": [],
+    "cost": { "red": 0, "blue": 0, "green": 2, "skillPoints": 2 },
+    "requiresDLC": "blood-and-wine"
+  },
+  {
+    "id": "mutated-skin",
+    "gameId": "mutation5",
+    "name": "Pele transformada",
+    "nameEn": "Mutated Skin",
+    "colors": ["red", "green"],
+    "description": "Cada ponto de adrenalina diminui o dano recebido em 15% (até um máximo de 45%).",
+    "requires": ["euphoria"],
+    "cost": { "red": 2, "blue": 0, "green": 3, "skillPoints": 5 },
+    "requiresDLC": "blood-and-wine"
+  },
+  {
+    "id": "piercing-cold",
+    "gameId": "mutation6",
+    "name": "Frio congelante",
+    "nameEn": "Piercing Cold",
+    "colors": ["blue"],
+    "description": "Quando o Sinal Aard é lançado, há uma chance adicional de 30% de congelar inimigos, variando conforme os pontos de adrenalina disponíveis. Inimigos nocauteados e congelados ao mesmo tempo morrem de imediato. Inimigos que não congelarem recebem 1500 de dano adicional.",
+    "requires": ["magic-sensibilities"],
+    "cost": { "red": 0, "blue": 3, "green": 0, "skillPoints": 3 },
+    "requiresDLC": "blood-and-wine"
+  },
+  {
+    "id": "adrenaline-rush",
+    "gameId": "mutation7",
+    "name": "Pico de adrenalina",
+    "nameEn": "Adrenaline Rush",
+    "colors": ["red", "blue"],
+    "description": "No começo do combate, o poder de ataque da espada e a intensidade do Sinal aumentam em 30% para cada inimigo além do primeiro, por tempo limitado. Quando o efeito acaba, caem 10% para cada inimigo envolvido além do primeiro.",
+    "requires": ["piercing-cold", "bloodbath"],
+    "cost": { "red": 2, "blue": 3, "green": 0, "skillPoints": 5 },
+    "requiresDLC": "blood-and-wine"
+  },
+  {
+    "id": "deadly-counter",
+    "gameId": "mutation8",
+    "name": "Contagem fatal",
+    "nameEn": "Deadly Counter",
+    "colors": ["red"],
+    "description": "Ataques com espada causam 25% a mais de dano a monstros e a oponentes humanos imunes a contra-ataques. Nos demais casos, se a Vitalidade do oponente estiver abaixo de 25%, um contra-ataque ativa imediatamente um golpe finalizador.",
+    "requires": [],
+    "cost": { "red": 2, "blue": 0, "green": 0, "skillPoints": 2 },
+    "requiresDLC": "blood-and-wine"
+  },
+  {
+    "id": "cat-eyes",
+    "gameId": "mutation9",
+    "name": "Olhos de gato",
+    "nameEn": "Cat Eyes",
+    "colors": ["red", "green"],
+    "description": "O dano de besta aumenta (conforme a besta usada) e a chance de acerto crítico sobe 50%. Virotes atravessam e nocauteiam ou atordoam oponentes. Oponentes atingidos com Vitalidade completa perdem 15% da Vitalidade.",
+    "requires": ["bloodbath", "euphoria"],
+    "cost": { "red": 2, "blue": 0, "green": 3, "skillPoints": 5 },
+    "requiresDLC": "blood-and-wine"
+  },
+  {
+    "id": "euphoria",
+    "gameId": "mutation10",
+    "name": "Euforia",
+    "nameEn": "Euphoria",
+    "colors": ["green"],
+    "description": "Cada ponto de toxicidade aumenta o dano causado pelas espadas e a intensidade do Sinal, transformando o veneno acumulado em poder ofensivo direto.",
+    "requires": ["toxic-blood"],
+    "cost": { "red": 0, "blue": 0, "green": 3, "skillPoints": 3 },
+    "requiresDLC": "blood-and-wine"
+  },
+  {
+    "id": "second-life",
+    "gameId": "mutation11",
+    "name": "Vida dupla",
+    "nameEn": "Second Life",
+    "colors": ["red", "blue", "green"],
+    "description": "Quando a Vitalidade fica zerada, você se torna temporariamente invulnerável e regenera Vitalidade. Este efeito só pode ser ativado uma vez a cada intervalo de tempo.",
+    "requires": ["adrenaline-rush"],
+    "cost": { "red": 3, "blue": 2, "green": 2, "skillPoints": 7 },
+    "requiresDLC": "blood-and-wine"
+  },
+  {
+    "id": "metamorphosis",
+    "gameId": "mutation12",
+    "name": "Metamorfose",
+    "nameEn": "Metamorphosis",
+    "colors": ["red", "blue", "green"],
+    "description": "Aplicar efeitos críticos em oponentes ativa um elixir aleatório por 120 segundos sem custo de toxicidade, até um máximo de 5 elixires simultâneos. Sentidos de bruxo ajudam a ver melhor em locais escuros.",
+    "requires": ["cat-eyes"],
+    "cost": { "red": 2, "blue": 2, "green": 3, "skillPoints": 7 },
+    "requiresDLC": "blood-and-wine"
+  }
 ]

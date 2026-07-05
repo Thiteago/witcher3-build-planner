@@ -1,10 +1,12 @@
-import { CUSTOM_BUILD_SCHEMA_VERSION, type CustomBuild, type Skill } from './types';
+import { CUSTOM_BUILD_SCHEMA_VERSION, type CustomBuild, type Mutation, type Skill } from './types';
 import { SKILL_SLOT_COUNT, SLOT_GROUP_SIZE } from './data/slotProgression';
 import skillsData from './data/skills.json';
+import mutationsData from './data/mutations.json';
 
 const STORAGE_KEY = 'tw3-builder:custom-builds:v2';
 
 const skillsById = new Map((skillsData as Skill[]).map((s) => [s.id, s]));
+const mutationIds = new Set((mutationsData as Mutation[]).map((m) => m.id));
 
 function isCustomBuildShape(value: unknown): value is Record<string, unknown> {
 	return typeof value === 'object' && value !== null;
@@ -41,6 +43,16 @@ function migrateV2ToV3(raw: Record<string, unknown>): Record<string, unknown> {
 }
 
 /**
+ * v3 -> v4: the mutation dataset was regenerated from the official game data;
+ * two ids that don't exist in the game ("cyclone", "symbiosis") were removed.
+ */
+function migrateV3ToV4(raw: Record<string, unknown>): Record<string, unknown> {
+	const mutation =
+		typeof raw.mutation === 'string' && mutationIds.has(raw.mutation) ? raw.mutation : null;
+	return { ...raw, schemaVersion: 4, mutation };
+}
+
+/**
  * Single seam for future schema changes: given whatever was parsed out of
  * localStorage, either return a valid CustomBuild or null to drop it.
  */
@@ -48,6 +60,7 @@ function migrateBuild(raw: unknown): CustomBuild | null {
 	if (!isCustomBuildShape(raw)) return null;
 	let build = raw;
 	if (build.schemaVersion === 2) build = migrateV2ToV3(build);
+	if (build.schemaVersion === 3) build = migrateV3ToV4(build);
 	if (build.schemaVersion !== CUSTOM_BUILD_SCHEMA_VERSION) return null;
 	if (typeof build.id !== 'string' || typeof build.name !== 'string') return null;
 	return build as unknown as CustomBuild;

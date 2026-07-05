@@ -15,11 +15,12 @@ oficiais extraídos do jogo** em `game_data/`:
 
 - `game_data/skills_official.json` — as 80 habilidades reais (id interno do
   jogo, árvore, coluna, tier, maxRank, nomes oficiais EN e PT-BR, DLC), mais
-  slots, mutagênios e as 12 mutações do B&W com custos/pré-requisitos.
-- `GAME_DATA_VALIDATION.md` — relatório do cruzamento app × jogo e o que ainda
-  falta corrigir no app (refactor do modelo de slots, skills faltantes etc.).
+  slots, mutagênios e as 12 mutações do B&W com custos/pré-requisitos e nomes
+  verificados.
+- `GAME_DATA_VALIDATION.md` — fontes, metodologia de identificação (útil se
+  sair patch) e a lista de pendências (o que resta é decisão de produto ou
+  validação de itens, não pesquisa de skills).
 - `game_data/*.xml` — XMLs crus extraídos dos bundles (UTF-8, convertidos).
-- `DADOS_PENDENTES.md` — o que resta é decisão de produto, não pesquisa.
 
 Regras do jogo já confirmadas (não re-pesquisar): tiers desbloqueiam com
 0/6/12/18 pontos gastos na mesma árvore; 1 ponto de habilidade por nível a
@@ -47,7 +48,8 @@ Instalação do jogo (Steam, via WSL):
   XOR-cifradas com chave por idioma; `br` do next-gen vem em claro). O hash
   que liga a chave textual (`skill_name_*`) ao id numérico é desconhecido —
   o mapeamento foi feito por clusters de ids (nomes de skills ≈ 1066820-1066909,
-  perks de DLC ≈ 1129065-1129126, mutações ≈ 1188298-1188320) e casando
+  perks de DLC ≈ 1129065-1129126, mutações = 1188298-1188321 na ordem
+  mutation1..12, exceto o nome de Magic Sensibilities em 1193282) e casando
   stats das abilities com as descrições.
 - `game_data/tools/build_official.py` regenera o `skills_official.json`
   (contém o mapeamento id-interno → str_id validado).
@@ -61,9 +63,10 @@ Instalação do jogo (Steam, via WSL):
   (Protective Coating = "Aterrorizar", Whirl = "Espira") — confirmado no jogo.
 - Skills cortadas existem nas strings mas não na árvore: Volley, Aegis,
   Druid Techniques, Predatory Instinct.
-- Remover/renomear ids em `skills.json` quebra builds salvas no localStorage —
-  há um seam de migração por `schemaVersion` em `src/lib/storage.ts` (v2→v3 já
-  implementada); bump `CUSTOM_BUILD_SCHEMA_VERSION` e adicione um passo lá.
+- Remover/renomear ids em `skills.json`/`mutations.json` quebra builds salvas
+  no localStorage — há um seam de migração por `schemaVersion` em
+  `src/lib/storage.ts` (v2→v3 e v3→v4 já implementadas); bump
+  `CUSTOM_BUILD_SCHEMA_VERSION` e adicione um passo lá.
 - O planner modela o sistema real: 12 slots genéricos em 4 grupos de 3, cada
   grupo pareado com 1 slot de mutagênico; skills têm `gameId` ligando ao id
   interno do jogo.

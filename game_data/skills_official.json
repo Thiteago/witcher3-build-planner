@@ -782,7 +782,7 @@
     }
   ],
   "mutations": {
-    "note": "sistema Blood and Wine; mapeamento id->nome nao verificado individualmente. Nomes oficiais (EN|BR): Magic Sensibilities|Sensibilidade Mágica, Conductors of Magic|Condutores da magia, Bloodbath|Banho de sangue, Toxic Blood|Sangue tóxico, Mutated Skin|Pele transformada, Piercing Cold|Frio congelante, Adrenaline Rush|Pico de adrenalina, Deadly Counter|Contagem fatal, Cat Eyes|Olhos de gato, Euphoria|Euforia, Second Life|Vida dupla, Metamorphosis|Metamorfose",
+    "note": "sistema Blood and Wine. Mapeamento mutation1..12 -> nome VERIFICADO (jul/2026): geralt_mutations.xml aponta localizationNameKey_name=skill_name_mutation_N; os str_ids dos nomes seguem a ordem N no cluster 1188298-1188321 (excecao: o nome de Magic Sensibilities fica em 1193282, com a descricao em 1188301), e os stats confirmam por pinos independentes: mut5_dmg_red_perc=Mutated Skin, full_freeze_chance=Piercing Cold, crit de Sinais=Magic Sensibilities, decoccoes=Metamorphosis, dmg_bonus 0.25 + hp_perc_trigger 0.25=Deadly Counter.",
     "extraSkillSlotsByResearchedCount": [
       2,
       4,
@@ -792,6 +792,9 @@
     "list": [
       {
         "id": "mutation1",
+        "nameEn": "Conductors of Magic",
+        "nameBr": "Condutores da magia",
+        "nameStrId": 1188298,
         "redMutagenPoints": 2,
         "blueMutagenPoints": 3,
         "greenMutagenPoints": 0,
@@ -806,6 +809,9 @@
       },
       {
         "id": "mutation2",
+        "nameEn": "Magic Sensibilities",
+        "nameBr": "Sensibilidade Mágica",
+        "nameStrId": 1193282,
         "redMutagenPoints": 0,
         "blueMutagenPoints": 2,
         "greenMutagenPoints": 0,
@@ -817,6 +823,9 @@
       },
       {
         "id": "mutation3",
+        "nameEn": "Bloodbath",
+        "nameBr": "Banho de sangue",
+        "nameStrId": 1188302,
         "redMutagenPoints": 3,
         "blueMutagenPoints": 0,
         "greenMutagenPoints": 0,
@@ -830,6 +839,9 @@
       },
       {
         "id": "mutation4",
+        "nameEn": "Toxic Blood",
+        "nameBr": "Sangue tóxico",
+        "nameStrId": 1188304,
         "redMutagenPoints": 0,
         "blueMutagenPoints": 0,
         "greenMutagenPoints": 2,
@@ -841,6 +853,9 @@
       },
       {
         "id": "mutation5",
+        "nameEn": "Mutated Skin",
+        "nameBr": "Pele transformada",
+        "nameStrId": 1188306,
         "redMutagenPoints": 2,
         "blueMutagenPoints": 0,
         "greenMutagenPoints": 3,
@@ -855,6 +870,9 @@
       },
       {
         "id": "mutation6",
+        "nameEn": "Piercing Cold",
+        "nameBr": "Frio congelante",
+        "nameStrId": 1188308,
         "redMutagenPoints": 0,
         "blueMutagenPoints": 3,
         "greenMutagenPoints": 0,
@@ -868,6 +886,9 @@
       },
       {
         "id": "mutation7",
+        "nameEn": "Adrenaline Rush",
+        "nameBr": "Pico de adrenalina",
+        "nameStrId": 1188310,
         "redMutagenPoints": 2,
         "blueMutagenPoints": 3,
         "greenMutagenPoints": 0,
@@ -883,6 +904,9 @@
       },
       {
         "id": "mutation8",
+        "nameEn": "Deadly Counter",
+        "nameBr": "Contagem fatal",
+        "nameStrId": 1188312,
         "redMutagenPoints": 2,
         "blueMutagenPoints": 0,
         "greenMutagenPoints": 0,
@@ -894,6 +918,9 @@
       },
       {
         "id": "mutation9",
+        "nameEn": "Cat Eyes",
+        "nameBr": "Olhos de gato",
+        "nameStrId": 1188314,
         "redMutagenPoints": 2,
         "blueMutagenPoints": 0,
         "greenMutagenPoints": 3,
@@ -909,6 +936,9 @@
       },
       {
         "id": "mutation10",
+        "nameEn": "Euphoria",
+        "nameBr": "Euforia",
+        "nameStrId": 1188316,
         "redMutagenPoints": 0,
         "blueMutagenPoints": 0,
         "greenMutagenPoints": 3,
@@ -922,6 +952,9 @@
       },
       {
         "id": "mutation11",
+        "nameEn": "Second Life",
+        "nameBr": "Vida dupla",
+        "nameStrId": 1188318,
         "redMutagenPoints": 3,
         "blueMutagenPoints": 2,
         "greenMutagenPoints": 2,
@@ -937,6 +970,9 @@
       },
       {
         "id": "mutation12",
+        "nameEn": "Metamorphosis",
+        "nameBr": "Metamorfose",
+        "nameStrId": 1188320,
         "redMutagenPoints": 2,
         "blueMutagenPoints": 2,
         "greenMutagenPoints": 3,

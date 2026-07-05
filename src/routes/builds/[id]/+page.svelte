@@ -8,6 +8,7 @@
 	import decoctionsData from '$lib/data/decoctions.json';
 	import type { CuratedBuild, Skill, GearSet, Mutation, GenericItem } from '$lib/types';
 	import SkillCard from '$lib/components/SkillCard.svelte';
+	import SkillTreePanel from '$lib/components/SkillTreePanel.svelte';
 	import { customBuilds } from '$lib/stores/customBuilds.svelte';
 	import { emptyEquippedSlots } from '$lib/utils/economy';
 	import { SKILL_SLOT_COUNT } from '$lib/data/slotProgression';
@@ -22,14 +23,21 @@
 
 	let build = $derived(builds.find((b) => b.id === page.params.id));
 	let buildSkills = $derived(
-		build ? build.skills.map((id) => skills.find((s) => s.id === id)).filter((s): s is Skill => !!s) : []
+		build
+			? build.skills.map((id) => skills.find((s) => s.id === id)).filter((s): s is Skill => !!s)
+			: []
 	);
 	let levelingSequence = $derived(build ? simulateLevelingSequence(build.skills, skills) : []);
 	let gearSet = $derived(gearSets.find((g) => g.school === build?.gearSchool));
 	let mutation = $derived(mutations.find((m) => m.id === build?.mutation));
 	let buildDecoctions = $derived(
-		build ? (build.decoctions ?? []).map((id) => decoctions.find((d) => d.id === id)).filter((d): d is GenericItem => !!d) : []
+		build
+			? (build.decoctions ?? [])
+					.map((id) => decoctions.find((d) => d.id === id))
+					.filter((d): d is GenericItem => !!d)
+			: []
 	);
+	let ranks = $derived(Object.fromEntries(buildSkills.map((s) => [s.id, s.maxRank])));
 
 	function copyToPlanner() {
 		if (!build) return;
@@ -83,11 +91,23 @@
 
 		<div>
 			<h2 class="text-sm font-semibold tracking-wide text-stone-400 uppercase">Habilidades</h2>
-			<div class="mt-2 grid grid-cols-1 gap-3 sm:grid-cols-2">
-				{#each buildSkills as skill (skill.id)}
-					<SkillCard {skill} />
-				{/each}
+			<p class="mt-1 text-sm text-stone-500">
+				Como fica a árvore com a build completa (passe o mouse numa habilidade para ver a
+				descrição).
+			</p>
+			<div class="mt-2 max-w-2xl">
+				<SkillTreePanel {skills} {ranks} />
 			</div>
+			<details class="mt-3">
+				<summary class="cursor-pointer text-sm text-stone-400 hover:text-stone-200">
+					Ver descrições das {buildSkills.length} habilidades
+				</summary>
+				<div class="mt-2 grid grid-cols-1 gap-3 sm:grid-cols-2">
+					{#each buildSkills as skill (skill.id)}
+						<SkillCard {skill} />
+					{/each}
+				</div>
+			</details>
 		</div>
 
 		<div>
@@ -95,16 +115,18 @@
 				Sequência de level up
 			</h2>
 			<p class="mt-1 text-sm text-stone-500">
-				Simulação de quando dá pra investir cada ponto, usando as regras confirmadas do jogo:
-				1 ponto por nível a partir do nível 2 e tiers liberados com 6/12/18 pontos na árvore
-				(pontos bônus de Locais de Poder não são contados).
+				Simulação de quando dá pra investir cada ponto, usando as regras confirmadas do jogo: 1
+				ponto por nível a partir do nível 2 e tiers liberados com 6/12/18 pontos na árvore (pontos
+				bônus de Locais de Poder não são contados).
 			</p>
 			<ol class="mt-2 space-y-1.5">
 				{#each levelingSequence as step, i (i)}
 					<li
 						class="flex items-center gap-3 rounded border border-stone-800 bg-stone-900/40 px-3 py-1.5 text-sm"
 					>
-						<span class="w-20 shrink-0 font-mono whitespace-nowrap text-stone-500">Nível {step.level}</span>
+						<span class="w-20 shrink-0 font-mono whitespace-nowrap text-stone-500"
+							>Nível {step.level}</span
+						>
 						<span class="text-stone-100">{step.skill.name}</span>
 						<span class="text-xs text-stone-500">
 							· {skillCategoryLabel[step.skill.category]} · rank {step.rank}/{step.skill.maxRank}
@@ -136,7 +158,9 @@
 				<h2 class="text-sm font-semibold tracking-wide text-stone-400 uppercase">Decocções</h2>
 				<div class="mt-2 flex flex-wrap gap-2">
 					{#each buildDecoctions as d (d.id)}
-						<span class="rounded-full bg-green-900/40 px-3 py-1 text-sm text-green-300">{d.name}</span>
+						<span class="rounded-full bg-green-900/40 px-3 py-1 text-sm text-green-300"
+							>{d.name}</span
+						>
 					{/each}
 				</div>
 			</div>
