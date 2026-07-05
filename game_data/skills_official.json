@@ -1,0 +1,965 @@
+{
+  "source": "gameplay/abilities/geralt_skills.xml (custom/skills, GeraltSkills) + en/br.w3strings, Witcher 3 Next-Gen (Steam, jul/2026)",
+  "tierThresholds": {
+    "1": 0,
+    "2": 6,
+    "3": 12,
+    "4": 18
+  },
+  "skillSlots": {
+    "levels": [
+      1,
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      15,
+      18,
+      22,
+      26,
+      30
+    ],
+    "model": "pool unico de 12 slots genericos, 4 grupos de 3; slots 13-16 desbloqueados via mutacoes (B&W)"
+  },
+  "mutagenSlotLevels": [
+    2,
+    9,
+    16,
+    28
+  ],
+  "skills": [
+    {
+      "gameId": "sword_s21",
+      "nameEn": "Muscle Memory",
+      "nameBr": "Memória Muscular",
+      "category": "combat",
+      "column": "Sword_StyleFast",
+      "tier": 1,
+      "maxRank": 3
+    },
+    {
+      "gameId": "sword_s17",
+      "nameEn": "Precise Blows",
+      "nameBr": "Golpes Precisos",
+      "category": "combat",
+      "column": "Sword_StyleFast",
+      "tier": 2,
+      "maxRank": 3
+    },
+    {
+      "gameId": "sword_s1",
+      "nameEn": "Whirl",
+      "nameBr": "Espira",
+      "category": "combat",
+      "column": "Sword_StyleFast",
+      "tier": 3,
+      "maxRank": 3
+    },
+    {
+      "gameId": "sword_s5",
+      "nameEn": "Crippling Strikes",
+      "nameBr": "Golpes Paralisantes",
+      "category": "combat",
+      "column": "Sword_StyleFast",
+      "tier": 4,
+      "maxRank": 3
+    },
+    {
+      "gameId": "sword_s4",
+      "nameEn": "Strength Training",
+      "nameBr": "Treinamento de Força",
+      "category": "combat",
+      "column": "Sword_StyleStrong",
+      "tier": 1,
+      "maxRank": 3
+    },
+    {
+      "gameId": "sword_s8",
+      "nameEn": "Crushing Blows",
+      "nameBr": "Golpes Esmagadores",
+      "category": "combat",
+      "column": "Sword_StyleStrong",
+      "tier": 2,
+      "maxRank": 3
+    },
+    {
+      "gameId": "sword_s2",
+      "nameEn": "Rend",
+      "nameBr": "Despedaçar",
+      "category": "combat",
+      "column": "Sword_StyleStrong",
+      "tier": 3,
+      "maxRank": 3
+    },
+    {
+      "gameId": "sword_s6",
+      "nameEn": "Sunder Armor",
+      "nameBr": "Romper Armadura",
+      "category": "combat",
+      "column": "Sword_StyleStrong",
+      "tier": 4,
+      "maxRank": 3
+    },
+    {
+      "gameId": "sword_s10",
+      "nameEn": "Arrow Deflection",
+      "nameBr": "Bloqueio de Flechas",
+      "category": "combat",
+      "column": "Sword_Utility",
+      "tier": 1,
+      "maxRank": 2
+    },
+    {
+      "gameId": "sword_s9",
+      "nameEn": "Fleet Footed",
+      "nameBr": "Pés Rápidos",
+      "category": "combat",
+      "column": "Sword_Utility",
+      "tier": 2,
+      "maxRank": 1
+    },
+    {
+      "gameId": "sword_s11",
+      "nameEn": "Counterattack",
+      "nameBr": "Contra-ataque",
+      "category": "combat",
+      "column": "Sword_Utility",
+      "tier": 3,
+      "maxRank": 3
+    },
+    {
+      "gameId": "sword_s3",
+      "nameEn": "Deadly Precision",
+      "nameBr": "Precisão Letal",
+      "category": "combat",
+      "column": "Sword_Utility",
+      "tier": 4,
+      "maxRank": 2
+    },
+    {
+      "gameId": "sword_s13",
+      "nameEn": "Lightning Reflexes",
+      "nameBr": "Reflexos Relâmpago",
+      "category": "combat",
+      "column": "Sword_Crossbow",
+      "tier": 1,
+      "maxRank": 1
+    },
+    {
+      "gameId": "sword_s15",
+      "nameEn": "Cold Blood",
+      "nameBr": "Sangue Frio",
+      "category": "combat",
+      "column": "Sword_Crossbow",
+      "tier": 2,
+      "maxRank": 3
+    },
+    {
+      "gameId": "sword_s7",
+      "nameEn": "Anatomical Knowledge",
+      "nameBr": "Conhecimento Anatômico",
+      "category": "combat",
+      "column": "Sword_Crossbow",
+      "tier": 3,
+      "maxRank": 3
+    },
+    {
+      "gameId": "sword_s12",
+      "nameEn": "Crippling Shot",
+      "nameBr": "Tiro Paralisante",
+      "category": "combat",
+      "column": "Sword_Crossbow",
+      "tier": 4,
+      "maxRank": 3
+    },
+    {
+      "gameId": "sword_s16",
+      "nameEn": "Resolve",
+      "nameBr": "Resolução",
+      "category": "combat",
+      "column": "Sword_BattleTrance",
+      "tier": 1,
+      "maxRank": 3
+    },
+    {
+      "gameId": "sword_s18",
+      "nameEn": "Undying",
+      "nameBr": "Imortal",
+      "category": "combat",
+      "column": "Sword_BattleTrance",
+      "tier": 2,
+      "maxRank": 3
+    },
+    {
+      "gameId": "sword_s20",
+      "nameEn": "Razor Focus",
+      "nameBr": "Foco Afiado",
+      "category": "combat",
+      "column": "Sword_BattleTrance",
+      "tier": 3,
+      "maxRank": 3
+    },
+    {
+      "gameId": "sword_s19",
+      "nameEn": "Flood of Anger",
+      "nameBr": "Enxurrada de Fúria",
+      "category": "combat",
+      "column": "Sword_BattleTrance",
+      "tier": 4,
+      "maxRank": 3
+    },
+    {
+      "gameId": "magic_s20",
+      "nameEn": "Far-Reaching Aard",
+      "nameBr": "Aard de Longo Alcance",
+      "category": "signs",
+      "column": "Signs_Aard",
+      "tier": 1,
+      "maxRank": 3
+    },
+    {
+      "gameId": "magic_s1",
+      "nameEn": "Aard Sweep",
+      "nameBr": "Varredura de Aard",
+      "category": "signs",
+      "column": "Signs_Aard",
+      "tier": 2,
+      "maxRank": 3
+    },
+    {
+      "gameId": "magic_s12",
+      "nameEn": "Aard Intensity",
+      "nameBr": "Intensidade do Aard",
+      "category": "signs",
+      "column": "Signs_Aard",
+      "tier": 3,
+      "maxRank": 3
+    },
+    {
+      "gameId": "magic_s6",
+      "nameEn": "Shock Wave",
+      "nameBr": "Onda de Choque",
+      "category": "signs",
+      "column": "Signs_Aard",
+      "tier": 4,
+      "maxRank": 3
+    },
+    {
+      "gameId": "magic_s8",
+      "nameEn": "Melt Armor",
+      "nameBr": "Derreter Armadura",
+      "category": "signs",
+      "column": "Signs_Igni",
+      "tier": 1,
+      "maxRank": 3
+    },
+    {
+      "gameId": "magic_s2",
+      "nameEn": "Firestream",
+      "nameBr": "Labareda de Fogo",
+      "category": "signs",
+      "column": "Signs_Igni",
+      "tier": 2,
+      "maxRank": 3
+    },
+    {
+      "gameId": "magic_s7",
+      "nameEn": "Igni Intensity",
+      "nameBr": "Intensidade do Igni",
+      "category": "signs",
+      "column": "Signs_Igni",
+      "tier": 3,
+      "maxRank": 3
+    },
+    {
+      "gameId": "magic_s9",
+      "nameEn": "Pyromaniac",
+      "nameBr": "Piromaníaco",
+      "category": "signs",
+      "column": "Signs_Igni",
+      "tier": 4,
+      "maxRank": 3
+    },
+    {
+      "gameId": "magic_s10",
+      "nameEn": "Sustained Glyphs",
+      "nameBr": "Glifos Sustentados",
+      "category": "signs",
+      "column": "Signs_Yrden",
+      "tier": 1,
+      "maxRank": 2
+    },
+    {
+      "gameId": "magic_s3",
+      "nameEn": "Magic Trap",
+      "nameBr": "Armadilha Mágica",
+      "category": "signs",
+      "column": "Signs_Yrden",
+      "tier": 2,
+      "maxRank": 3
+    },
+    {
+      "gameId": "magic_s16",
+      "nameEn": "Yrden Intensity",
+      "nameBr": "Intensidade do Yrden",
+      "category": "signs",
+      "column": "Signs_Yrden",
+      "tier": 3,
+      "maxRank": 3
+    },
+    {
+      "gameId": "magic_s11",
+      "nameEn": "Supercharged Glyphs",
+      "nameBr": "Glifos Sobrecarregados",
+      "category": "signs",
+      "column": "Signs_Yrden",
+      "tier": 4,
+      "maxRank": 3
+    },
+    {
+      "gameId": "magic_s13",
+      "nameEn": "Exploding Shield",
+      "nameBr": "Escudo Explosivo",
+      "category": "signs",
+      "column": "Signs_Quen",
+      "tier": 1,
+      "maxRank": 3
+    },
+    {
+      "gameId": "magic_s4",
+      "nameEn": "Active Shield",
+      "nameBr": "Escudo Ativo",
+      "category": "signs",
+      "column": "Signs_Quen",
+      "tier": 2,
+      "maxRank": 3
+    },
+    {
+      "gameId": "magic_s15",
+      "nameEn": "Quen Intensity",
+      "nameBr": "Intensidade do Quen",
+      "category": "signs",
+      "column": "Signs_Quen",
+      "tier": 3,
+      "maxRank": 3
+    },
+    {
+      "gameId": "magic_s14",
+      "nameEn": "Quen Discharge",
+      "nameBr": "Descarga de Quen",
+      "category": "signs",
+      "column": "Signs_Quen",
+      "tier": 4,
+      "maxRank": 3
+    },
+    {
+      "gameId": "magic_s17",
+      "nameEn": "Delusion",
+      "nameBr": "Persuasão",
+      "category": "signs",
+      "column": "Signs_Axi",
+      "tier": 1,
+      "maxRank": 3
+    },
+    {
+      "gameId": "magic_s5",
+      "nameEn": "Puppet",
+      "nameBr": "Marionete",
+      "category": "signs",
+      "column": "Signs_Axi",
+      "tier": 2,
+      "maxRank": 3
+    },
+    {
+      "gameId": "magic_s18",
+      "nameEn": "Axii Intensity",
+      "nameBr": "Intensidade do Sinal Axii",
+      "category": "signs",
+      "column": "Signs_Axi",
+      "tier": 3,
+      "maxRank": 3
+    },
+    {
+      "gameId": "magic_s19",
+      "nameEn": "Domination",
+      "nameBr": "Dominação",
+      "category": "signs",
+      "column": "Signs_Axi",
+      "tier": 4,
+      "maxRank": 3
+    },
+    {
+      "gameId": "alchemy_s1",
+      "nameEn": "Heightened Tolerance",
+      "nameBr": "Tolerância Aumentada",
+      "category": "alchemy",
+      "column": "Alchemy_Potions",
+      "tier": 1,
+      "maxRank": 3
+    },
+    {
+      "gameId": "alchemy_s2",
+      "nameEn": "Refreshment",
+      "nameBr": "Refresco",
+      "category": "alchemy",
+      "column": "Alchemy_Potions",
+      "tier": 2,
+      "maxRank": 3
+    },
+    {
+      "gameId": "alchemy_s3",
+      "nameEn": "Delayed Recovery",
+      "nameBr": "Recuperação Atrasada",
+      "category": "alchemy",
+      "column": "Alchemy_Potions",
+      "tier": 3,
+      "maxRank": 3
+    },
+    {
+      "gameId": "alchemy_s4",
+      "nameEn": "Side Effects",
+      "nameBr": "Efeitos Colaterais",
+      "category": "alchemy",
+      "column": "Alchemy_Potions",
+      "tier": 4,
+      "maxRank": 3
+    },
+    {
+      "gameId": "alchemy_s12",
+      "nameEn": "Poisoned Blades",
+      "nameBr": "Lâminas Venenosas",
+      "category": "alchemy",
+      "column": "Alchemy_Oils",
+      "tier": 1,
+      "maxRank": 3
+    },
+    {
+      "gameId": "alchemy_s5",
+      "nameEn": "Protective Coating",
+      "nameBr": "Aterrorizar",
+      "category": "alchemy",
+      "column": "Alchemy_Oils",
+      "tier": 2,
+      "maxRank": 3
+    },
+    {
+      "gameId": "alchemy_s6",
+      "nameEn": "Fixative",
+      "nameBr": "Solidificador",
+      "category": "alchemy",
+      "column": "Alchemy_Oils",
+      "tier": 3,
+      "maxRank": 3
+    },
+    {
+      "gameId": "alchemy_s7",
+      "nameEn": "Hunter Instinct",
+      "nameBr": "Instinto de Caçador",
+      "category": "alchemy",
+      "column": "Alchemy_Oils",
+      "tier": 4,
+      "maxRank": 3
+    },
+    {
+      "gameId": "alchemy_s9",
+      "nameEn": "Steady Aim",
+      "nameBr": "Mão Firme",
+      "category": "alchemy",
+      "column": "Alchemy_Bombs",
+      "tier": 1,
+      "maxRank": 1
+    },
+    {
+      "gameId": "alchemy_s10",
+      "nameEn": "Pyrotechnics",
+      "nameBr": "Pirotecnia",
+      "category": "alchemy",
+      "column": "Alchemy_Bombs",
+      "tier": 2,
+      "maxRank": 3
+    },
+    {
+      "gameId": "alchemy_s8",
+      "nameEn": "Efficiency",
+      "nameBr": "Eficiência",
+      "category": "alchemy",
+      "column": "Alchemy_Bombs",
+      "tier": 3,
+      "maxRank": 3
+    },
+    {
+      "gameId": "alchemy_s11",
+      "nameEn": "Cluster Bombs",
+      "nameBr": "Bombas Enxame",
+      "category": "alchemy",
+      "column": "Alchemy_Bombs",
+      "tier": 4,
+      "maxRank": 3
+    },
+    {
+      "gameId": "alchemy_s18",
+      "nameEn": "Acquired Tolerance",
+      "nameBr": "Tolerância Adquirida",
+      "category": "alchemy",
+      "column": "Alchemy_Mutagens",
+      "tier": 1,
+      "maxRank": 3
+    },
+    {
+      "gameId": "alchemy_s13",
+      "nameEn": "Tissue Transmutation",
+      "nameBr": "Transmutação de Tecido",
+      "category": "alchemy",
+      "column": "Alchemy_Mutagens",
+      "tier": 2,
+      "maxRank": 3
+    },
+    {
+      "gameId": "alchemy_s19",
+      "nameEn": "Synergy",
+      "nameBr": "Sinergia",
+      "category": "alchemy",
+      "column": "Alchemy_Mutagens",
+      "tier": 3,
+      "maxRank": 3
+    },
+    {
+      "gameId": "alchemy_s14",
+      "nameEn": "Adaptation",
+      "nameBr": "Adaptação",
+      "category": "alchemy",
+      "column": "Alchemy_Mutagens",
+      "tier": 4,
+      "maxRank": 3
+    },
+    {
+      "gameId": "alchemy_s16",
+      "nameEn": "Frenzy",
+      "nameBr": "Frenesi",
+      "category": "alchemy",
+      "column": "Alchemy_Grasses",
+      "tier": 1,
+      "maxRank": 3
+    },
+    {
+      "gameId": "alchemy_s20",
+      "nameEn": "Endure Pain",
+      "nameBr": "Aguentar Dor",
+      "category": "alchemy",
+      "column": "Alchemy_Grasses",
+      "tier": 2,
+      "maxRank": 3
+    },
+    {
+      "gameId": "alchemy_s15",
+      "nameEn": "Fast Metabolism",
+      "nameBr": "Metabolismo Rápido",
+      "category": "alchemy",
+      "column": "Alchemy_Grasses",
+      "tier": 3,
+      "maxRank": 3
+    },
+    {
+      "gameId": "alchemy_s17",
+      "nameEn": "Killing Spree",
+      "nameBr": "Matança",
+      "category": "alchemy",
+      "column": "Alchemy_Grasses",
+      "tier": 4,
+      "maxRank": 3
+    },
+    {
+      "gameId": "perk_1",
+      "nameEn": "Sun and Stars",
+      "nameBr": "Sol e Estrelas",
+      "category": "general",
+      "column": "Perks_col1",
+      "tier": 1,
+      "maxRank": 1
+    },
+    {
+      "gameId": "perk_2",
+      "nameEn": "Steady Shot",
+      "nameBr": "Olhos de Águia",
+      "category": "general",
+      "column": "Perks_col1",
+      "tier": 1,
+      "maxRank": 1
+    },
+    {
+      "gameId": "perk_4",
+      "nameEn": "Survival Instinct",
+      "nameBr": "Instinto de Sobrevivência",
+      "category": "general",
+      "column": "Perks_col2",
+      "tier": 1,
+      "maxRank": 1
+    },
+    {
+      "gameId": "perk_5",
+      "nameEn": "Cat School Techniques",
+      "nameBr": "Técnicas da Escola do Gato",
+      "category": "general",
+      "column": "Perks_col3",
+      "tier": 1,
+      "maxRank": 1
+    },
+    {
+      "gameId": "perk_6",
+      "nameEn": "Griffin School Techniques",
+      "nameBr": "Técnicas da Escola do Grifo",
+      "category": "general",
+      "column": "Perks_col4",
+      "tier": 1,
+      "maxRank": 1
+    },
+    {
+      "gameId": "perk_7",
+      "nameEn": "Bear School Techniques",
+      "nameBr": "Técnicas da Escola do Urso",
+      "category": "general",
+      "column": "Perks_col5",
+      "tier": 1,
+      "maxRank": 1
+    },
+    {
+      "gameId": "perk_9",
+      "nameEn": "Rage Management",
+      "nameBr": "Controle de Raiva",
+      "category": "general",
+      "column": "Perks_col2",
+      "tier": 1,
+      "maxRank": 1
+    },
+    {
+      "gameId": "perk_10",
+      "nameEn": "Adrenaline Burst",
+      "nameBr": "Surto de Adrenalina",
+      "category": "general",
+      "column": "Perks_col3",
+      "tier": 1,
+      "maxRank": 1
+    },
+    {
+      "gameId": "perk_11",
+      "nameEn": "Focus",
+      "nameBr": "Foco",
+      "category": "general",
+      "column": "Perks_col4",
+      "tier": 1,
+      "maxRank": 1
+    },
+    {
+      "gameId": "perk_12",
+      "nameEn": "Metabolic Control",
+      "nameBr": "Controle do Metabolismo",
+      "category": "general",
+      "column": "Perks_col5",
+      "tier": 1,
+      "maxRank": 1
+    },
+    {
+      "gameId": "perk_13",
+      "nameEn": "Metabolism Boosts",
+      "nameBr": "Aumentos de Metabolismo",
+      "category": "general",
+      "column": "Perks",
+      "tier": 1,
+      "maxRank": 1,
+      "requiresDLC": "hearts-of-stone",
+      "descEn": "If available, Adrenaline Points will be consumed to reduce the Toxicity cost of drinking potions by $I$% per point. Does not affect mutagen decoctions.",
+      "descBr": "Se disponíveis, os Pontos de Adrenalina serão consumidos para reduzir o custo de Toxicidade ao tomar poções em $I$% por cada ponto. Isso não se aplica a elixires mutagênicos."
+    },
+    {
+      "gameId": "perk_17",
+      "nameEn": "Trick Shot",
+      "nameBr": "Tiro Adicional",
+      "category": "general",
+      "column": "Perks",
+      "tier": 1,
+      "maxRank": 1,
+      "requiresDLC": "hearts-of-stone",
+      "descEn": "You can shoot one additional bolt before you must reload.",
+      "descBr": "Você pode atirar um virote adicional antes de precisar recarregar."
+    },
+    {
+      "gameId": "perk_18",
+      "nameEn": "Advanced Pyrotechnics",
+      "nameBr": "Pirotecnia Avançada",
+      "category": "general",
+      "column": "Perks",
+      "tier": 1,
+      "maxRank": 1,
+      "requiresDLC": "hearts-of-stone",
+      "descEn": "Damage dealt by a bomb's explosion generates $F$ Adrenaline Points.",
+      "descBr": "O dano causado pela explosão de bombas gera $F$ Pontos de Adrenalina."
+    },
+    {
+      "gameId": "perk_19",
+      "nameEn": "Battle Frenzy",
+      "nameBr": "Frenesi de Batalha",
+      "category": "general",
+      "column": "Perks",
+      "tier": 1,
+      "maxRank": 1,
+      "requiresDLC": "hearts-of-stone",
+      "descEn": "Instead of its previous effect, Battle Trance now increases critical hit chance by $I$% per Adrenaline Point.",
+      "descBr": "Diferente de seu efeito anterior, o Transe de Batalha agora pode aumentar a chance de acerto crítico em $I$% por cada Ponto de Adrenalina."
+    },
+    {
+      "gameId": "perk_22",
+      "nameEn": "Strong Back",
+      "nameBr": "Ombros Largos",
+      "category": "general",
+      "column": "Perks",
+      "tier": 1,
+      "maxRank": 1,
+      "requiresDLC": "hearts-of-stone",
+      "descEn": "Maximum inventory weight is increased by $I$.",
+      "descBr": "O peso máximo do inventário é aumentado em $I$."
+    },
+    {
+      "gameId": "perk_14",
+      "nameEn": "Gorged on Power",
+      "nameBr": "Empanturrado de Poder",
+      "category": "general",
+      "column": "Perks",
+      "tier": 1,
+      "maxRank": 1,
+      "requiresDLC": "blood-and-wine",
+      "descEn": "The bonus from a Place of Power lasts indefinitely - but only one such bonus can be active at a given time.",
+      "descBr": "O bônus de um Local de Poder dura indefinidamente, mas só um bônus pode estar ativo por vez."
+    },
+    {
+      "gameId": "perk_15",
+      "nameEn": "Gourmet",
+      "nameBr": "Gourmet",
+      "category": "general",
+      "column": "Perks",
+      "tier": 1,
+      "maxRank": 1,
+      "requiresDLC": "blood-and-wine",
+      "descEn": "Eating food regenerates Vitality for $S$ minutes.",
+      "descBr": "Comer comida regenera Vitalidade por $S$ minutos."
+    },
+    {
+      "gameId": "perk_16",
+      "nameEn": "In Combat's Fires",
+      "nameBr": "Nos Fogos do Combate",
+      "category": "general",
+      "column": "Perks",
+      "tier": 1,
+      "maxRank": 1,
+      "requiresDLC": "blood-and-wine",
+      "descEn": "You ignore bomb and special bolt effects.",
+      "descBr": "Você ignora efeitos de bomba e virotes especiais."
+    },
+    {
+      "gameId": "perk_20",
+      "nameEn": "Heavy Artillery",
+      "nameBr": "Artilharia Pesada",
+      "category": "general",
+      "column": "Perks",
+      "tier": 1,
+      "maxRank": 1,
+      "requiresDLC": "blood-and-wine",
+      "descEn": "Bomb damage is tripled -- but the number of bombs in slots is decreased by half. This does not apply to bombs which deal no damage.",
+      "descBr": "O dano de bomba triplica, mas o número de bombas nos espaços reduz à metade. Isso não se aplica a bombas que não causam danos."
+    },
+    {
+      "gameId": "perk_21",
+      "nameEn": "Attack is the Best Defense",
+      "nameBr": "Atacar é a Melhor Defesa",
+      "category": "general",
+      "column": "Perks",
+      "tier": 1,
+      "maxRank": 1,
+      "requiresDLC": "blood-and-wine",
+      "descEn": "Each defensive action generates Adrenaline Points: Parries $S$ points, Counterattacks $S$ points, Dodges $S$ points, Rolls $S$ points. Cannot be activated more than once every $S$ seconds.",
+      "descBr": "Cada ação defensiva gera pontos de adrenalina: bloqueios geram $S$ pontos, contra-ataques geram $S$ pontos, esquivas geram $S$ pontos, rolagem gera $S$ pontos. Não pode ser ativada mais de uma vez a cada $S$ segundos."
+    }
+  ],
+  "mutations": {
+    "note": "sistema Blood and Wine; mapeamento id->nome nao verificado individualmente. Nomes oficiais (EN|BR): Magic Sensibilities|Sensibilidade Mágica, Conductors of Magic|Condutores da magia, Bloodbath|Banho de sangue, Toxic Blood|Sangue tóxico, Mutated Skin|Pele transformada, Piercing Cold|Frio congelante, Adrenaline Rush|Pico de adrenalina, Deadly Counter|Contagem fatal, Cat Eyes|Olhos de gato, Euphoria|Euforia, Second Life|Vida dupla, Metamorphosis|Metamorfose",
+    "extraSkillSlotsByResearchedCount": [
+      2,
+      4,
+      8,
+      12
+    ],
+    "list": [
+      {
+        "id": "mutation1",
+        "redMutagenPoints": 2,
+        "blueMutagenPoints": 3,
+        "greenMutagenPoints": 0,
+        "skillPoints": 5,
+        "colors": [
+          "red",
+          "blue"
+        ],
+        "requires": [
+          "mutation6"
+        ]
+      },
+      {
+        "id": "mutation2",
+        "redMutagenPoints": 0,
+        "blueMutagenPoints": 2,
+        "greenMutagenPoints": 0,
+        "skillPoints": 2,
+        "colors": [
+          "blue"
+        ],
+        "requires": []
+      },
+      {
+        "id": "mutation3",
+        "redMutagenPoints": 3,
+        "blueMutagenPoints": 0,
+        "greenMutagenPoints": 0,
+        "skillPoints": 3,
+        "colors": [
+          "red"
+        ],
+        "requires": [
+          "mutation8"
+        ]
+      },
+      {
+        "id": "mutation4",
+        "redMutagenPoints": 0,
+        "blueMutagenPoints": 0,
+        "greenMutagenPoints": 2,
+        "skillPoints": 2,
+        "colors": [
+          "green"
+        ],
+        "requires": []
+      },
+      {
+        "id": "mutation5",
+        "redMutagenPoints": 2,
+        "blueMutagenPoints": 0,
+        "greenMutagenPoints": 3,
+        "skillPoints": 5,
+        "colors": [
+          "red",
+          "green"
+        ],
+        "requires": [
+          "mutation10"
+        ]
+      },
+      {
+        "id": "mutation6",
+        "redMutagenPoints": 0,
+        "blueMutagenPoints": 3,
+        "greenMutagenPoints": 0,
+        "skillPoints": 3,
+        "colors": [
+          "blue"
+        ],
+        "requires": [
+          "mutation2"
+        ]
+      },
+      {
+        "id": "mutation7",
+        "redMutagenPoints": 2,
+        "blueMutagenPoints": 3,
+        "greenMutagenPoints": 0,
+        "skillPoints": 5,
+        "colors": [
+          "red",
+          "blue"
+        ],
+        "requires": [
+          "mutation6",
+          "mutation3"
+        ]
+      },
+      {
+        "id": "mutation8",
+        "redMutagenPoints": 2,
+        "blueMutagenPoints": 0,
+        "greenMutagenPoints": 0,
+        "skillPoints": 2,
+        "colors": [
+          "red"
+        ],
+        "requires": []
+      },
+      {
+        "id": "mutation9",
+        "redMutagenPoints": 2,
+        "blueMutagenPoints": 0,
+        "greenMutagenPoints": 3,
+        "skillPoints": 5,
+        "colors": [
+          "red",
+          "green"
+        ],
+        "requires": [
+          "mutation3",
+          "mutation10"
+        ]
+      },
+      {
+        "id": "mutation10",
+        "redMutagenPoints": 0,
+        "blueMutagenPoints": 0,
+        "greenMutagenPoints": 3,
+        "skillPoints": 3,
+        "colors": [
+          "green"
+        ],
+        "requires": [
+          "mutation4"
+        ]
+      },
+      {
+        "id": "mutation11",
+        "redMutagenPoints": 3,
+        "blueMutagenPoints": 2,
+        "greenMutagenPoints": 2,
+        "skillPoints": 7,
+        "colors": [
+          "red",
+          "blue",
+          "green"
+        ],
+        "requires": [
+          "mutation7"
+        ]
+      },
+      {
+        "id": "mutation12",
+        "redMutagenPoints": 2,
+        "blueMutagenPoints": 2,
+        "greenMutagenPoints": 3,
+        "skillPoints": 7,
+        "colors": [
+          "red",
+          "blue",
+          "green"
+        ],
+        "requires": [
+          "mutation9"
+        ]
+      },
+      {
+        "id": "mutationMaster",
+        "redMutagenPoints": 0,
+        "blueMutagenPoints": 0,
+        "greenMutagenPoints": 0,
+        "skillPoints": 0,
+        "colors": [],
+        "requires": []
+      }
+    ]
+  },
+  "xpPerLevel": "geralt_levelups.xml: nivel 2-10 custa 1000-ish crescente, 1 skill point por nivel a partir do 2; ver arquivo para tabela completa"
+}

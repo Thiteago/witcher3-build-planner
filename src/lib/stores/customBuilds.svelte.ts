@@ -1,11 +1,8 @@
 import { browser } from '$app/environment';
 import { loadBuilds, saveBuilds } from '../storage';
-import {
-	ABILITY_SLOT_COUNT,
-	CUSTOM_BUILD_SCHEMA_VERSION,
-	MUTAGEN_SLOT_COUNT,
-	type CustomBuild
-} from '../types';
+import { emptyEquippedSlots } from '../utils/economy';
+import { SKILL_SLOT_COUNT } from '../data/slotProgression';
+import { CUSTOM_BUILD_SCHEMA_VERSION, MUTAGEN_SLOT_COUNT, type CustomBuild } from '../types';
 
 function createCustomBuildsStore() {
 	let builds = $state<CustomBuild[]>(browser ? loadBuilds() : []);
@@ -23,7 +20,8 @@ function createCustomBuildsStore() {
 			createdAt: now,
 			updatedAt: now,
 			level: 1,
-			skills: Array(ABILITY_SLOT_COUNT).fill(null),
+			learnedSkills: [],
+			equipped: emptyEquippedSlots(SKILL_SLOT_COUNT),
 			mutagens: Array(MUTAGEN_SLOT_COUNT).fill(null),
 			mutation: null,
 			gearSchool: null,
@@ -47,7 +45,8 @@ function createCustomBuildsStore() {
 		if (!source) return null;
 		return create(`${source.name} (cópia)`, {
 			level: source.level,
-			skills: [...source.skills],
+			learnedSkills: source.learnedSkills.map((inv) => ({ ...inv })),
+			equipped: [...source.equipped],
 			mutagens: [...source.mutagens],
 			mutation: source.mutation,
 			gearSchool: source.gearSchool,

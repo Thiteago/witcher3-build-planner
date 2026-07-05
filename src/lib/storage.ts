@@ -1,9 +1,43 @@
-import { CUSTOM_BUILD_SCHEMA_VERSION, type CustomBuild } from './types';
+import { CUSTOM_BUILD_SCHEMA_VERSION, type CustomBuild, type Skill } from './types';
+import { SKILL_SLOT_COUNT, SLOT_GROUP_SIZE } from './data/slotProgression';
+import skillsData from './data/skills.json';
 
-const STORAGE_KEY = 'tw3-builder:custom-builds:v1';
+const STORAGE_KEY = 'tw3-builder:custom-builds:v2';
+
+const skillsById = new Map((skillsData as Skill[]).map((s) => [s.id, s]));
 
 function isCustomBuildShape(value: unknown): value is Record<string, unknown> {
 	return typeof value === 'object' && value !== null;
+}
+
+/**
+ * v2 -> v3: the equip model changed from 3 slots per color to the game's real
+ * single pool of 12 generic slots (4 groups of 3). Old per-color slots map
+ * onto groups in tree order (red -> group 1, blue -> 2, green -> 3,
+ * none -> 4). Skill ids that no longer exist (the v2 dataset had skills that
+ * aren't in the game) are dropped, and ranks are clamped to the real maxRank.
+ */
+function migrateV2ToV3(raw: Record<string, unknown>): Record<string, unknown> {
+	const oldEquipped = (raw.equipped ?? {}) as Record<string, (string | null)[]>;
+	const equipped: (string | null)[] = Array(SKILL_SLOT_COUNT).fill(null);
+	(['red', 'blue', 'green', 'none'] as const).forEach((color, group) => {
+		(oldEquipped[color] ?? []).slice(0, SLOT_GROUP_SIZE).forEach((skillId, i) => {
+			if (skillId && skillsById.has(skillId)) equipped[group * SLOT_GROUP_SIZE + i] = skillId;
+		});
+	});
+
+	const learnedSkills = (Array.isArray(raw.learnedSkills) ? raw.learnedSkills : [])
+		.filter(
+			(inv): inv is { skillId: string; rank: number } =>
+				isCustomBuildShape(inv) && typeof inv.skillId === 'string' && typeof inv.rank === 'number'
+		)
+		.flatMap((inv) => {
+			const skill = skillsById.get(inv.skillId);
+			if (!skill) return [];
+			return [{ skillId: inv.skillId, rank: Math.max(1, Math.min(skill.maxRank, inv.rank)) }];
+		});
+
+	return { ...raw, schemaVersion: 3, equipped, learnedSkills };
 }
 
 /**
@@ -12,9 +46,11 @@ function isCustomBuildShape(value: unknown): value is Record<string, unknown> {
  */
 function migrateBuild(raw: unknown): CustomBuild | null {
 	if (!isCustomBuildShape(raw)) return null;
-	if (raw.schemaVersion !== CUSTOM_BUILD_SCHEMA_VERSION) return null;
-	if (typeof raw.id !== 'string' || typeof raw.name !== 'string') return null;
-	return raw as unknown as CustomBuild;
+	let build = raw;
+	if (build.schemaVersion === 2) build = migrateV2ToV3(build);
+	if (build.schemaVersion !== CUSTOM_BUILD_SCHEMA_VERSION) return null;
+	if (typeof build.id !== 'string' || typeof build.name !== 'string') return null;
+	return build as unknown as CustomBuild;
 }
 
 export function loadBuilds(): CustomBuild[] {

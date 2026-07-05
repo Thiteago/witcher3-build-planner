@@ -9,8 +9,9 @@
 	import type { CuratedBuild, Skill, GearSet, Mutation, GenericItem } from '$lib/types';
 	import SkillCard from '$lib/components/SkillCard.svelte';
 	import { customBuilds } from '$lib/stores/customBuilds.svelte';
-	import { ABILITY_SLOT_COUNT } from '$lib/types';
-	import { buildLevelingSequence } from '$lib/utils/leveling';
+	import { emptyEquippedSlots } from '$lib/utils/economy';
+	import { SKILL_SLOT_COUNT } from '$lib/data/slotProgression';
+	import { simulateLevelingSequence } from '$lib/utils/leveling';
 	import { skillCategoryLabel } from '$lib/labels';
 
 	const builds = buildsData as CuratedBuild[];
@@ -23,7 +24,7 @@
 	let buildSkills = $derived(
 		build ? build.skills.map((id) => skills.find((s) => s.id === id)).filter((s): s is Skill => !!s) : []
 	);
-	let levelingSequence = $derived(build ? buildLevelingSequence(build.skills, skills) : []);
+	let levelingSequence = $derived(build ? simulateLevelingSequence(build.skills, skills) : []);
 	let gearSet = $derived(gearSets.find((g) => g.school === build?.gearSchool));
 	let mutation = $derived(mutations.find((m) => m.id === build?.mutation));
 	let buildDecoctions = $derived(
@@ -32,13 +33,22 @@
 
 	function copyToPlanner() {
 		if (!build) return;
-		const skillsArr = Array(ABILITY_SLOT_COUNT).fill(null);
-		build.skills.forEach((id, i) => {
-			if (i < ABILITY_SLOT_COUNT) skillsArr[i] = id;
-		});
+		const equipped = emptyEquippedSlots(SKILL_SLOT_COUNT);
+		let nextSlot = 0;
+		const learnedSkills = build.skills
+			.map((id) => skills.find((s) => s.id === id))
+			.filter((s): s is Skill => !!s)
+			.map((skill) => {
+				if (nextSlot < SKILL_SLOT_COUNT) equipped[nextSlot++] = skill.id;
+				return { skillId: skill.id, rank: skill.maxRank };
+			});
+
+		const totalRanks = learnedSkills.reduce((sum, inv) => sum + inv.rank, 0);
 		const newBuild = customBuilds.create(build.name, {
-			level: 30,
-			skills: skillsArr,
+			// enough levels to afford every point in the build (1 point/level from level 2)
+			level: Math.min(100, totalRanks + 1),
+			learnedSkills,
+			equipped,
 			gearSchool: build.gearSchool,
 			mutation: build.mutation ?? null,
 			decoctions: build.decoctions ?? []
@@ -85,20 +95,20 @@
 				Sequência de level up
 			</h2>
 			<p class="mt-1 text-sm text-stone-500">
-				Ordem sugerida de escolha das habilidades conforme os slots são liberados por nível.
+				Simulação de quando dá pra investir cada ponto, usando as regras confirmadas do jogo:
+				1 ponto por nível a partir do nível 2 e tiers liberados com 6/12/18 pontos na árvore
+				(pontos bônus de Locais de Poder não são contados).
 			</p>
 			<ol class="mt-2 space-y-1.5">
-				{#each levelingSequence as step (step.level)}
+				{#each levelingSequence as step, i (i)}
 					<li
 						class="flex items-center gap-3 rounded border border-stone-800 bg-stone-900/40 px-3 py-1.5 text-sm"
 					>
 						<span class="w-20 shrink-0 font-mono whitespace-nowrap text-stone-500">Nível {step.level}</span>
-						{#if step.skill}
-							<span class="text-stone-100">{step.skill.name}</span>
-							<span class="text-xs text-stone-500">· {skillCategoryLabel[step.skill.category]}</span>
-						{:else}
-							<span class="text-stone-500 italic">— sua escolha —</span>
-						{/if}
+						<span class="text-stone-100">{step.skill.name}</span>
+						<span class="text-xs text-stone-500">
+							· {skillCategoryLabel[step.skill.category]} · rank {step.rank}/{step.skill.maxRank}
+						</span>
 					</li>
 				{/each}
 			</ol>
